@@ -39,61 +39,59 @@ The project integrates three primary data streams:
 ---
 
 ## 📂 Repository Structure
-├── data/
-│   ├── raw/                  # Raw shipping logs & infrastructure data
-│   ├── processed/            # Weather-merged feature matrices
-│   └── spatial/              # Route shapefiles & weather grids
-├── notebooks/
-│   ├── 01_data_ingestion.ipynb
-│   ├── 02_geospatial_feature_engineering.ipynb
-│   ├── 03_model_training_classification.ipynb
-│   └── 04_survival_analysis_eval.ipynb
-├── src/
-│   ├── data_pipeline.py      # NOAA/OpenWeather ingestion & spatial matching
-│   ├── features.py           # Feature extraction & data normalization
-│   └── models.py             # Model definitions (XGBoost, Random Forest, CoxPH)
-├── config/
-│   └── config.yaml           # API keys, pathing, and model hyperparameters
-├── README.md
-└── requirements.txt
+  * ├── data/
+  * │   ├── raw/                  # Raw shipping logs & infrastructure data
+  * │   ├── processed/            # Weather-merged feature matrices
+  *│    └── spatial/              # Route shapefiles & weather grids
+  * ├── notebooks/
+  * │   ├── 01_data_ingestion.ipynb
+  * │   ├── 02_geospatial_feature_engineering.ipynb
+  * │   ├── 03_model_training_classification.ipynb
+  * │   └── 04_survival_analysis_eval.ipynb
+  * ├── src/
+  * │   ├── data_pipeline.py      # NOAA/OpenWeather ingestion & spatial matching
+  * │   ├── features.py           # Feature extraction & data normalization
+  * │   └── models.py             # Model definitions (XGBoost, Random Forest, CoxPH)
+  * ├── config/
+  * │   └── config.yaml           # API keys, pathing, and model hyperparameters
+  * ├── README.md
+  * └── requirements.txt
 
 
 ---
 
 ## 🔧 Prerequisites & Installation
 
-Ensure you have Python 3.9+ installed along with the required spatial and machine learning libraries:
+  * Ensure you have Python 3.9+ installed along with the required spatial and machine learning libraries:
 
-```bash
 # Clone the repository
-git clone [https://github.com/your-username/climate-supply-chain-delays.git](https://github.com/your-username/climate-supply-chain-delays.git)
-cd climate-supply-chain-delays
+  * git clone [https://github.com/your-username/climate-supply-chain-delays.git](https://github.com/your-username/climate-supply-chain-delays.git)
+  * cd climate-supply-chain-delays
 
 # Install dependencies
-pip install -r requirements.txt
-Core Libraries Used:
-Data Processing & ML: pandas, numpy, scikit-learn, xgboost
+  * pip install -r requirements.txt
+  * Core Libraries Used:
+  * Data Processing & ML: pandas, numpy, scikit-learn, xgboost
 
-Geospatial Processing: geopandas, shapely, folium
+  * Geospatial Processing: geopandas, shapely, folium
 
-Survival Analysis: lifelines
+  * Survival Analysis: lifelines
 
-Weather Ingestion: requests (OpenWeather API integration)
+  * Weather Ingestion: requests (OpenWeather API integration)
 
-🚀 How to Run
-Configuration: Add your OpenWeather API credentials and update directory paths in config/config.yaml.
+## 🚀 How to Run
+  * Configuration: Add your OpenWeather API credentials and update directory paths in config/config.yaml.
 
-Data Pipeline & Spatial Merging:
+  * Data Pipeline & Spatial Merging:
 
-Bash
-python src/data_pipeline.py
-Model Training & Evaluation: Run the modeling notebooks in notebooks/ or execute the training script:
+  * python src/data_pipeline.py
+  * Model Training & Evaluation: Run the modeling notebooks in notebooks/ or execute the training script:
 
-Bash
-python src/models.py
-🛣️ Roadmap & Future Enhancements
-[ ] API Integration: Connect directly to real-time carrier GPS feeds for continuous risk re-scoring.
+  * python src/models.py
 
-[ ] Dynamic Route Optimization: Integrate graph algorithms (e.g., A* or Dijkstra's algorithm modified with weather risk weights) to automate proactive rerouting.
+## 🛣️ Roadmap & Future Enhancements
+  * [ ] API Integration: Connect directly to real-time carrier GPS feeds for continuous risk re-scoring.
 
-[ ] IoT Sensor Fusion: Incorporate real-time cargo environmental metrics (container temperature, humidity) for sensitive goods.
+  * [ ] Dynamic Route Optimization: Integrate graph algorithms (e.g., A* or Dijkstra's algorithm modified with weather risk weights) to automate proactive rerouting.
+
+  * [ ] IoT Sensor Fusion: Incorporate real-time cargo environmental metrics (container temperature, humidity) for sensitive goods.
