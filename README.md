@@ -78,6 +78,8 @@ The project integrates three primary data streams:
   * Survival Analysis: lifelines
 
   * Weather Ingestion: requests (OpenWeather API integration)
+    
+---
 
 ## 🚀 How to Run
   * Configuration: Add your OpenWeather API credentials and update directory paths in config/config.yaml.
@@ -88,6 +90,8 @@ The project integrates three primary data streams:
   * Model Training & Evaluation: Run the modeling notebooks in notebooks/ or execute the training script:
 
   * python src/models.py
+    
+---
 
 ## 🛣️ Roadmap & Future Enhancements
   * [ ] API Integration: Connect directly to real-time carrier GPS feeds for continuous risk re-scoring.
